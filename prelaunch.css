@@ -1,0 +1,256 @@
+/* Styles for the GoNext pre-launch landing page */
+
+/* Color palette */
+:root {
+  --primary-color: #0d2f61;
+  --accent-color: #f47c2b;
+  --light-blue: #eaf4fb;
+  --text-color: #102a43;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: #ffffff;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+header img.logo {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+header .brand {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Hero section */
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  color: var(--primary-color);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #334e68;
+}
+
+.cta {
+  display: inline-block;
+  background-color: var(--accent-color);
+  color: #ffffff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.cta:hover {
+  background-color: #d96b25;
+}
+
+.hero-image {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Generic section styling */
+.section {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #334e68;
+}
+
+/* Features list */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.feature-item {
+  flex: 1 1 calc(50% - 1.5rem);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.feature-text h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.feature-text p {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.95rem;
+  color: #5a7184;
+}
+
+/* Journey section */
+.journey {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.journey-item {
+  flex: 1 1 calc(50% - 2rem);
+  background-color: var(--light-blue);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.journey-item .icon {
+  font-size: 50px;
+  margin-bottom: 0.5rem;
+}
+
+.journey-item .label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.bullets {
+  list-style-type: none;
+  padding: 0;
+}
+
+.bullets li {
+  margin-bottom: 0.5rem;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.05rem;
+  color: #334e68;
+}
+
+.bullets li::before {
+  content: '✔';
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
+
+/* Waitlist section */
+.waitlist {
+  background-color: var(--light-blue);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.waitlist h2 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.waitlist input[type="email"] {
+  padding: 0.6rem 1rem;
+  border: 1px solid #cbd2d9;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 250px;
+  max-width: 80%;
+  margin-right: 0.5rem;
+}
+
+.waitlist button {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 1.2rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.waitlist button:hover {
+  background-color: #d96b25;
+}
+
+/* Footer */
+.footer {
+  background-color: #f5f8fa;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #627d98;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+  .features .feature-item {
+    flex: 1 1 100%;
+  }
+  .journey .journey-item {
+    flex: 1 1 100%;
+  }
+}
